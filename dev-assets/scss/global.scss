@@ -1,146 +1,151 @@
 // Author : Anton Boshoff //
 // /* === IMPORTS === */
 @import "normalize-min.scss";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800);
 
 
 // /* === VARIABLES === */
-$mainColor: #000000;
+$mainColor:     #364159;
+$clearColor:    #ffffff;
 
-// /* === RESETS === */
+$domColor:      #f2e4c9;
 
 
-
-
-/* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
-   ========================================================================== */
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #000000;
-}
-
-body {
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-img {
-    vertical-align: middle;
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-textarea {
-    resize: vertical;
+// /* === FONTS === */
+@mixin mainFont($weight, $style: normal) {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $weight;
+    font-style: $style;
 }
 
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
+// /* ==== MIXINS ==== */
+@mixin transition($property, $duration, $function, $delay : 0s) {
+    -webkit-transition: $property $duration $function $delay;
+    -moz-transition: $property $duration $function $delay;
+    -ms-transition: $property $duration $function $delay;
+    -o-transition: $property $duration $function $delay;
+    transition: $property $duration $function $delay;
+}
+@mixin boxSize($box) {
+    -webkit-box-sizing: $box;
+    -moz-box-sizing: $box;
+    box-sizing: $box;
 }
 
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
+
+/* === SELECTION === */
+::-moz-selection { background: $mainColor; text-shadow: none; color: $clearColor; }
+::selection { background: $mainColor; text-shadow: none; color: $clearColor; }
+
+
+/* === GENERAL === */
+body { font-size: 1em; line-height: 1.6em; background: $domColor; color: $mainColor;
+    @include mainFont(300);
 }
 
-.hidden {
-    display: none !important;
-    visibility: hidden;
+img { vertical-align: middle; }
+
+.spacer { height: 100px; width: 100%; float: left; }
+
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5, h6 { }
+h1 { font-size: 72px; @include mainFont(800); }
+h2 { }
+h3 { }
+h4 { }
+h5 { }
+h6 { }
+
+p { }
+
+span { }
+
+blockquote { }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+
+/* === FORMS === */
+form { }
+
+fieldset { border: 0; margin: 0; padding: 0; }
+
+textarea { resize: vertical; }
+
+
+/* === EMBRYONIC GRID === */
+.em-body { width: 100%; padding: 0 24px; margin: auto;
+    @include boxSize(border-box);
+    .em-contain { width: 100%; float: left; background: lighten($mainColor, 10%);
+        .em-cell { }
+        .em-cell-12, .em-cell-11,
+        .em-cell-10, .em-cell-9,
+        .em-cell-8, .em-cell-7,
+        .em-cell-6, .em-cell-5,
+        .em-cell-4, .em-cell-3,
+        .em-cell-2, .em-cell-1 { width: 100%; float: left; margin: 0; }
+        .fill-cell { background: $mainColor; color: $clearColor; text-align: center; margin-top: 2px !important; margin-bottom: 2px !important; padding: 4px 0; font-size: 14px; }
+    }
+}
+.em-body-fluid { max-width: 1188px; }
+
+
+
+
+/* === IE8 FIXES === */
+.ie8 { }
+
+
+/* === IE9 FIXES === */
+.ie9 { }
+
+
+/* === MEDIA QUERIES === */
+/* Browsers > 480px */
+@media screen and (min-width: 480px) {
+
+
 }
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+
+/* Browsers > 768px */
+@media screen and (min-width: 768px) {
+
+/* === EMBRYONIC GRID === */
+.em-body {
+    .em-contain {
+        .em-cell { margin: 0 2%; }
+        .em-cell-12 { width: 96%; }
+        .em-cell-11 { width: 87.666666%; }
+        .em-cell-10 { width: 79.333333%; }
+        .em-cell-9  { width: 71%; }
+        .em-cell-8  { width: 62.666666%; }
+        .em-cell-7  { width: 54.333333%; }
+        .em-cell-6  { width: 46%; }
+        .em-cell-5  { width: 37.666666%; }
+        .em-cell-4  { width: 29.333333%; }
+        .em-cell-3  { width: 21%; }
+        .em-cell-2  { width: 12.666666%; }
+        .em-cell-1 { width: 4.333333%; }
+    }
 }
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
 }
 
-.invisible {
-    visibility: hidden;
+
+/* Browsers > 960px */
+@media screen and (min-width: 960px) {
+
+
 }
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
 
-.clearfix:after {
-    clear: both;
-}
 
-.clearfix {
-    *zoom: 1;
-}
 
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
 
+/* === PRINT === */
 @media print {
     * {
         background: transparent !important;
