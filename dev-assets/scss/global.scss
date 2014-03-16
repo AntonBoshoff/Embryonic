@@ -40,7 +40,7 @@ $domColor:      #f2e4c9;
 
 
 /* === GENERAL === */
-body { font-size: 1em; line-height: 1.6em; background: $domColor; color: $mainColor;
+body { font-size: 1em; line-height: 1.6em; background: #ac0101; color: $mainColor;
     @include mainFont(300);
 }
 
