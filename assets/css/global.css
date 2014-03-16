@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800);
-/*! normalize.css v1.1.2 | MIT License | git.io/normalize */
+/* normalize.css v1.1.2 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
 
@@ -34,11 +34,11 @@ a:active, a:hover {
 
 h1 {
   font-size: 2em;
-  margin: .67em 0; }
+  margin: 0.67em 0; }
 
 h2 {
   font-size: 1.5em;
-  margin: .83em 0; }
+  margin: 0.83em 0; }
 
 h3 {
   font-size: 1.17em;
@@ -141,7 +141,7 @@ form {
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: .35em .625em .75em; }
+  padding: 0.35em 0.625em 0.75em; }
 
 legend {
   border: 0;
@@ -211,9 +211,9 @@ table {
 body {
   font-size: 1em;
   line-height: 1.6em;
-  background: #f2e4c9;
+  background: #ac0101;
   color: #364159;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-style: normal; }
 
@@ -228,7 +228,7 @@ img {
 /* === TYPOGRAPHY === */
 h1 {
   font-size: 72px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 800;
   font-style: normal; }
 
@@ -236,7 +236,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -320,7 +320,7 @@ textarea {
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: black !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -345,7 +345,7 @@ textarea {
 
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid; }
 
   thead {
