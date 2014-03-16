@@ -40,7 +40,7 @@ $domColor:      #f2e4c9;
 
 
 /* === GENERAL === */
-body { font-size: 1em; line-height: 1.6em; background: #ac0101; color: $mainColor;
+body { font-size: 1em; line-height: 1.6em; background: $mainColor; color: $mainColor;
     @include mainFont(300);
 }
 
@@ -76,9 +76,9 @@ textarea { resize: vertical; }
 
 
 /* === EMBRYONIC GRID === */
-.em-body { width: 100%; padding: 0 24px; margin: auto;
+.em-contain { padding: 24px; width: 100%; float: left; background: $clearColor;
     @include boxSize(border-box);
-    .em-contain { width: 100%; float: left; background: lighten($mainColor, 10%);
+    .em-row { width: 100%; float: left;
         .em-cell { }
         .em-cell-12, .em-cell-11,
         .em-cell-10, .em-cell-9,
@@ -89,7 +89,7 @@ textarea { resize: vertical; }
         .fill-cell { background: $mainColor; color: $clearColor; text-align: center; margin-top: 2px !important; margin-bottom: 2px !important; padding: 4px 0; font-size: 14px; }
     }
 }
-.em-body-fluid { max-width: 1188px; }
+// .em-body-fluid { max-width: 1188px; }
 
 
 
@@ -107,15 +107,20 @@ textarea { resize: vertical; }
 @media screen and (min-width: 480px) {
 
 
+/* === EMBRYONIC GRID === */
+.em-contain { width: 460px; position: relative; margin: 0 0 0 -230px; left: 50%; }
+
+
 }
 
 
 /* Browsers > 768px */
 @media screen and (min-width: 768px) {
 
+
 /* === EMBRYONIC GRID === */
-.em-body {
-    .em-contain {
+.em-contain { width: 748px; margin: 0 0 0 -374px;
+    .em-row {
         .em-cell { margin: 0 2%; }
         .em-cell-12 { width: 96%; }
         .em-cell-11 { width: 87.666666%; }
@@ -128,7 +133,7 @@ textarea { resize: vertical; }
         .em-cell-4  { width: 29.333333%; }
         .em-cell-3  { width: 21%; }
         .em-cell-2  { width: 12.666666%; }
-        .em-cell-1 { width: 4.333333%; }
+        .em-cell-1  { width: 4.333333%; }
     }
 }
 
@@ -137,6 +142,21 @@ textarea { resize: vertical; }
 
 /* Browsers > 960px */
 @media screen and (min-width: 960px) {
+
+
+/* === EMBRYONIC GRID === */
+.em-contain { width: 940px; margin: 0 0 0 -470px; }
+
+
+}
+
+
+/* Browsers > 1200px */
+@media screen and (min-width: 1200px) {
+
+
+/* === EMBRYONIC GRID === */
+.em-contain { width: 1140px; margin: 0 0 0 -570px; }
 
 
 }

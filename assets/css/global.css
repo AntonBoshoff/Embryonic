@@ -211,7 +211,7 @@ table {
 body {
   font-size: 1em;
   line-height: 1.6em;
-  background: #ac0101;
+  background: #364159;
   color: #364159;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -250,27 +250,27 @@ textarea {
   resize: vertical; }
 
 /* === EMBRYONIC GRID === */
-.em-body {
+.em-contain {
+  padding: 24px;
   width: 100%;
-  padding: 0 24px;
-  margin: auto;
+  float: left;
+  background: white;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  .em-body .em-contain {
+  .em-contain .em-row {
     width: 100%;
-    float: left;
-    background: #495879; }
-    .em-body .em-contain .em-cell-12, .em-body .em-contain .em-cell-11,
-    .em-body .em-contain .em-cell-10, .em-body .em-contain .em-cell-9,
-    .em-body .em-contain .em-cell-8, .em-body .em-contain .em-cell-7,
-    .em-body .em-contain .em-cell-6, .em-body .em-contain .em-cell-5,
-    .em-body .em-contain .em-cell-4, .em-body .em-contain .em-cell-3,
-    .em-body .em-contain .em-cell-2, .em-body .em-contain .em-cell-1 {
+    float: left; }
+    .em-contain .em-row .em-cell-12, .em-contain .em-row .em-cell-11,
+    .em-contain .em-row .em-cell-10, .em-contain .em-row .em-cell-9,
+    .em-contain .em-row .em-cell-8, .em-contain .em-row .em-cell-7,
+    .em-contain .em-row .em-cell-6, .em-contain .em-row .em-cell-5,
+    .em-contain .em-row .em-cell-4, .em-contain .em-row .em-cell-3,
+    .em-contain .em-row .em-cell-2, .em-contain .em-row .em-cell-1 {
       width: 100%;
       float: left;
       margin: 0; }
-    .em-body .em-contain .fill-cell {
+    .em-contain .em-row .fill-cell {
       background: #364159;
       color: white;
       text-align: center;
@@ -279,43 +279,61 @@ textarea {
       padding: 4px 0;
       font-size: 14px; }
 
-.em-body-fluid {
-  max-width: 1188px; }
-
 /* === IE8 FIXES === */
 /* === IE9 FIXES === */
 /* === MEDIA QUERIES === */
 /* Browsers > 480px */
+@media screen and (min-width: 480px) {
+  /* === EMBRYONIC GRID === */
+  .em-contain {
+    width: 460px;
+    position: relative;
+    margin: 0 0 0 -230px;
+    left: 50%; } }
 /* Browsers > 768px */
 @media screen and (min-width: 768px) {
   /* === EMBRYONIC GRID === */
-  .em-body .em-contain .em-cell {
-    margin: 0 2%; }
-  .em-body .em-contain .em-cell-12 {
-    width: 96%; }
-  .em-body .em-contain .em-cell-11 {
-    width: 87.666666%; }
-  .em-body .em-contain .em-cell-10 {
-    width: 79.333333%; }
-  .em-body .em-contain .em-cell-9 {
-    width: 71%; }
-  .em-body .em-contain .em-cell-8 {
-    width: 62.666666%; }
-  .em-body .em-contain .em-cell-7 {
-    width: 54.333333%; }
-  .em-body .em-contain .em-cell-6 {
-    width: 46%; }
-  .em-body .em-contain .em-cell-5 {
-    width: 37.666666%; }
-  .em-body .em-contain .em-cell-4 {
-    width: 29.333333%; }
-  .em-body .em-contain .em-cell-3 {
-    width: 21%; }
-  .em-body .em-contain .em-cell-2 {
-    width: 12.666666%; }
-  .em-body .em-contain .em-cell-1 {
-    width: 4.333333%; } }
+  .em-contain {
+    width: 748px;
+    margin: 0 0 0 -374px; }
+    .em-contain .em-row .em-cell {
+      margin: 0 2%; }
+    .em-contain .em-row .em-cell-12 {
+      width: 96%; }
+    .em-contain .em-row .em-cell-11 {
+      width: 87.666666%; }
+    .em-contain .em-row .em-cell-10 {
+      width: 79.333333%; }
+    .em-contain .em-row .em-cell-9 {
+      width: 71%; }
+    .em-contain .em-row .em-cell-8 {
+      width: 62.666666%; }
+    .em-contain .em-row .em-cell-7 {
+      width: 54.333333%; }
+    .em-contain .em-row .em-cell-6 {
+      width: 46%; }
+    .em-contain .em-row .em-cell-5 {
+      width: 37.666666%; }
+    .em-contain .em-row .em-cell-4 {
+      width: 29.333333%; }
+    .em-contain .em-row .em-cell-3 {
+      width: 21%; }
+    .em-contain .em-row .em-cell-2 {
+      width: 12.666666%; }
+    .em-contain .em-row .em-cell-1 {
+      width: 4.333333%; } }
 /* Browsers > 960px */
+@media screen and (min-width: 960px) {
+  /* === EMBRYONIC GRID === */
+  .em-contain {
+    width: 940px;
+    margin: 0 0 0 -470px; } }
+/* Browsers > 1200px */
+@media screen and (min-width: 1200px) {
+  /* === EMBRYONIC GRID === */
+  .em-contain {
+    width: 1140px;
+    margin: 0 0 0 -570px; } }
 /* === PRINT === */
 @media print {
   * {
