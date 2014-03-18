@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800);
-/* normalize.css v1.1.2 | MIT License | git.io/normalize */
+/*! normalize.css v1.1.2 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
 
@@ -34,11 +34,11 @@ a:active, a:hover {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: .67em 0; }
 
 h2 {
   font-size: 1.5em;
-  margin: 0.83em 0; }
+  margin: .83em 0; }
 
 h3 {
   font-size: 1.17em;
@@ -141,7 +141,7 @@ form {
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: .35em .625em .75em; }
 
 legend {
   border: 0;
@@ -213,7 +213,7 @@ body {
   line-height: 1.6em;
   background: #364159;
   color: #364159;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-style: normal; }
 
@@ -228,7 +228,7 @@ img {
 /* === TYPOGRAPHY === */
 h1 {
   font-size: 72px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   font-style: normal; }
 
@@ -236,7 +236,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -254,30 +254,30 @@ textarea {
   padding: 24px;
   width: 100%;
   float: left;
+  position: relative;
+  left: 0;
   background: white;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s; }
   .em-contain .em-row {
     width: 100%;
     float: left; }
-    .em-contain .em-row .em-cell-12, .em-contain .em-row .em-cell-11,
-    .em-contain .em-row .em-cell-10, .em-contain .em-row .em-cell-9,
-    .em-contain .em-row .em-cell-8, .em-contain .em-row .em-cell-7,
-    .em-contain .em-row .em-cell-6, .em-contain .em-row .em-cell-5,
-    .em-contain .em-row .em-cell-4, .em-contain .em-row .em-cell-3,
-    .em-contain .em-row .em-cell-2, .em-contain .em-row .em-cell-1 {
+    .em-contain .em-row .em-cell {
       width: 100%;
-      float: left;
-      margin: 0; }
+      float: left; }
     .em-contain .em-row .fill-cell {
-      background: #364159;
       color: white;
+      background: #364159;
       text-align: center;
-      margin-top: 2px !important;
-      margin-bottom: 2px !important;
       padding: 4px 0;
-      font-size: 14px; }
+      font-size: 14px;
+      border-bottom: 1px solid #ffffff; }
 
 /* === IE8 FIXES === */
 /* === IE9 FIXES === */
@@ -287,58 +287,147 @@ textarea {
   /* === EMBRYONIC GRID === */
   .em-contain {
     width: 460px;
-    position: relative;
     margin: 0 0 0 -230px;
-    left: 50%; } }
+    left: 50%; }
+    .em-contain .em-row {
+      width: 105%;
+      margin-left: -2.5%; }
+      .em-contain .em-row .em-cell {
+        margin: 0 2.5%; }
+      .em-contain .em-row .em-cell-12 {
+        width: 95%; }
+      .em-contain .em-row .em-cell-11 {
+        width: 86.666666%; }
+      .em-contain .em-row .em-cell-10 {
+        width: 78.333333%; }
+      .em-contain .em-row .em-cell-9 {
+        width: 70%; }
+      .em-contain .em-row .em-cell-8 {
+        width: 61.666666%; }
+      .em-contain .em-row .em-cell-7 {
+        width: 53.333333%; }
+      .em-contain .em-row .em-cell-6 {
+        width: 45%; }
+      .em-contain .em-row .em-cell-5 {
+        width: 36.666666%; }
+      .em-contain .em-row .em-cell-4 {
+        width: 28.333333%; }
+      .em-contain .em-row .em-cell-3 {
+        width: 20%; }
+      .em-contain .em-row .em-cell-2 {
+        width: 11.666666%; }
+      .em-contain .em-row .em-cell-1 {
+        width: 3.333333%; } }
 /* Browsers > 768px */
 @media screen and (min-width: 768px) {
   /* === EMBRYONIC GRID === */
   .em-contain {
     width: 748px;
     margin: 0 0 0 -374px; }
-    .em-contain .em-row .em-cell {
-      margin: 0 2%; }
-    .em-contain .em-row .em-cell-12 {
-      width: 96%; }
-    .em-contain .em-row .em-cell-11 {
-      width: 87.666666%; }
-    .em-contain .em-row .em-cell-10 {
-      width: 79.333333%; }
-    .em-contain .em-row .em-cell-9 {
-      width: 71%; }
-    .em-contain .em-row .em-cell-8 {
-      width: 62.666666%; }
-    .em-contain .em-row .em-cell-7 {
-      width: 54.333333%; }
-    .em-contain .em-row .em-cell-6 {
-      width: 46%; }
-    .em-contain .em-row .em-cell-5 {
-      width: 37.666666%; }
-    .em-contain .em-row .em-cell-4 {
-      width: 29.333333%; }
-    .em-contain .em-row .em-cell-3 {
-      width: 21%; }
-    .em-contain .em-row .em-cell-2 {
-      width: 12.666666%; }
-    .em-contain .em-row .em-cell-1 {
-      width: 4.333333%; } }
+    .em-contain .em-row {
+      width: 104%;
+      margin-left: -2%; }
+      .em-contain .em-row .em-cell {
+        margin: 0 2%; }
+      .em-contain .em-row .em-cell-12 {
+        width: 96%; }
+      .em-contain .em-row .em-cell-11 {
+        width: 87.666666%; }
+      .em-contain .em-row .em-cell-10 {
+        width: 79.333333%; }
+      .em-contain .em-row .em-cell-9 {
+        width: 71%; }
+      .em-contain .em-row .em-cell-8 {
+        width: 62.666666%; }
+      .em-contain .em-row .em-cell-7 {
+        width: 54.333333%; }
+      .em-contain .em-row .em-cell-6 {
+        width: 46%; }
+      .em-contain .em-row .em-cell-5 {
+        width: 37.666666%; }
+      .em-contain .em-row .em-cell-4 {
+        width: 29.333333%; }
+      .em-contain .em-row .em-cell-3 {
+        width: 21%; }
+      .em-contain .em-row .em-cell-2 {
+        width: 12.666666%; }
+      .em-contain .em-row .em-cell-1 {
+        width: 4.333333%; } }
 /* Browsers > 960px */
 @media screen and (min-width: 960px) {
   /* === EMBRYONIC GRID === */
   .em-contain {
     width: 940px;
-    margin: 0 0 0 -470px; } }
+    margin: 0 0 0 -470px; }
+    .em-contain .em-row {
+      width: 103%;
+      margin-left: -1.5%; }
+      .em-contain .em-row .em-cell {
+        margin: 0 1.5%; }
+      .em-contain .em-row .em-cell-12 {
+        width: 97%; }
+      .em-contain .em-row .em-cell-11 {
+        width: 88.666666%; }
+      .em-contain .em-row .em-cell-10 {
+        width: 80.333333%; }
+      .em-contain .em-row .em-cell-9 {
+        width: 72%; }
+      .em-contain .em-row .em-cell-8 {
+        width: 63.666666%; }
+      .em-contain .em-row .em-cell-7 {
+        width: 55.333333%; }
+      .em-contain .em-row .em-cell-6 {
+        width: 47%; }
+      .em-contain .em-row .em-cell-5 {
+        width: 38.666666%; }
+      .em-contain .em-row .em-cell-4 {
+        width: 30.333333%; }
+      .em-contain .em-row .em-cell-3 {
+        width: 22%; }
+      .em-contain .em-row .em-cell-2 {
+        width: 13.666666%; }
+      .em-contain .em-row .em-cell-1 {
+        width: 5.333333%; } }
 /* Browsers > 1200px */
 @media screen and (min-width: 1200px) {
   /* === EMBRYONIC GRID === */
   .em-contain {
     width: 1140px;
-    margin: 0 0 0 -570px; } }
+    margin: 0 0 0 -570px; }
+    .em-contain .em-row {
+      width: 102.4%;
+      margin-left: -1.2%; }
+      .em-contain .em-row .em-cell {
+        margin: 0 1.2%; }
+      .em-contain .em-row .em-cell-12 {
+        width: 97.6%; }
+      .em-contain .em-row .em-cell-11 {
+        width: 89.266666%; }
+      .em-contain .em-row .em-cell-10 {
+        width: 80.933333%; }
+      .em-contain .em-row .em-cell-9 {
+        width: 72.6%; }
+      .em-contain .em-row .em-cell-8 {
+        width: 64.266666%; }
+      .em-contain .em-row .em-cell-7 {
+        width: 55.933333%; }
+      .em-contain .em-row .em-cell-6 {
+        width: 47.6%; }
+      .em-contain .em-row .em-cell-5 {
+        width: 39.266666%; }
+      .em-contain .em-row .em-cell-4 {
+        width: 30.933333%; }
+      .em-contain .em-row .em-cell-3 {
+        width: 22.6%; }
+      .em-contain .em-row .em-cell-2 {
+        width: 14.266666%; }
+      .em-contain .em-row .em-cell-1 {
+        width: 5.933333%; } }
 /* === PRINT === */
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -363,7 +452,7 @@ textarea {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid; }
 
   thead {
